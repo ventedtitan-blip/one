@@ -1,0 +1,83 @@
+DECLARE
+	v_salary employees.salary%TYPE;
+ 
+BEGIN
+	SELECT salary INTO v_salary
+	FROM employees
+	WHERE emp_id=105;
+
+	IF v_salary < 1000 THEN
+		DBMS_OUTPUT.PUT_LINE('Raise Needed');
+	ELSE
+		DBMS_OUTPUT.PUT_LINE('Salary OK');
+	END IF;
+END;
+/
+
+DECLARET
+	CURSOR c_emp IS SELECT name, salary FROM employees WHERE dept_id=20;
+	v_name employees.name%TYPE;
+	v_salary employees.salary%TYPE;
+BEGIN
+	OPEN c_emp;
+	LOOP
+		FETCH c_emp INTO v_name, v_salary;
+		EXIT WHEN c_emp%NOTFOUND;
+		DBMS_OUTPUT.PUT_LINE(v_name || ': '|| v_salary); 
+	END LOOP;
+	CLOSE c_emp;
+END;
+/
+
+
+
+
+
+
+
+CREATE OR REPLACE PROCEDURE give_raise(
+	p_emp_id IN employees.emp_id%TYPE,
+	p_percentage IN Number
+)
+IS
+BEGIN
+	UPDATE employees
+	SET salary = salary+(salary*p_percentage/100)
+	WHERE emp_id=p_emp_id;
+END;
+/
+
+
+
+
+
+
+
+CREATE OR REPLACE FUNCTION get_dept_avg_salary(
+	v_dept_id IN employees.dept_id%TYPE
+	)	RETURN Number;
+IS
+	v_avg NUMBER;
+BEGIN
+	SELECT AVG(salary) INTO v_avg 
+	FROM employees 
+	WHERE dept_id = v_dept_id;
+
+	RETURN v_avg;
+END;
+/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

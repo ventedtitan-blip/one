@@ -1,0 +1,27 @@
+1. FizzBuzz variant
+
+Write a function that takes a number n and prints numbers from 1 to n. For multiples of 3, print "Fizz" instead of the number. For multiples of 5, print "Buzz". For multiples of both, print "FizzBuzz".
+
+
+
+
+
+2. String manipulation
+
+Write a function that takes a string and returns True/true if it's a palindrome (reads the same forwards and backwards), ignoring case and spaces. Example: "A man a plan a canal Panama" → true.
+
+
+
+
+
+3. List/array problem
+
+Given a list of integers, write a function that returns the second largest number in the list, without using a built-in sort function.
+
+
+
+
+
+4. Basic data structure
+
+Write a function that takes a list of employee records (each a dict/associative array with name and salary), and returns the name of the employee with the highest salary.
