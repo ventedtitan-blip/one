@@ -21,16 +21,32 @@ ignoring case and spaces. Example: "A man a plan a canal Panama" → true.
 
 3. List/array problem
 
+<<<<<<< HEAD
+Given a list of integers, write a function that
+ returns the second largest number in the list,
+  without using a built-in sort function.
+=======
 Given a list of integers, write a function that returns 
 the second largest number in the list, without using a built-in sort function.
+>>>>>>> 5cf7d471f332060b9e4801eedfbdd927902da308
 
 
 
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 5cf7d471f332060b9e4801eedfbdd927902da308
 4. Basic data structure
 
+<<<<<<< HEAD
+Write a function that takes a list of employee
+ records (each a dict/associative array with 
+ name and salary), and returns the name of the 
+ employee with the highest salary.
+=======
 Write a function that takes a list of employee records 
 (each a dict/associative array with name and salary), 
 and returns the name of the employee with the highest salary.
+>>>>>>> 5cf7d471f332060b9e4801eedfbdd927902da308
