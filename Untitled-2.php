@@ -1,4 +1,9 @@
 <?php
+
+// This is a C++ style single-line comment
+// This is a C++ style single-line comment
+// This is a C++ style single-line comment
+
 function FizzBuzz($n) {
     for ($i=1;$i<=$n;$i++) {
         if ($i % 3 == 0 and $i % 5 == 0) {
@@ -17,7 +22,10 @@ function FizzBuzz($n) {
     }
 }
 
-<?php
+// This is a C++ style single-line comment
+// This is a C++ style single-line comment
+// This is a C++ style single-line comment
+
 
 function palindrome($s) {
     $cleaned= strtolower(str_replace(" ", "", $s));
@@ -29,18 +37,53 @@ function palindrome($s) {
 var_dump(palindrome("acar"));
 
 
+// This is a C++ style single-line comment
+// This is a C++ style single-line comment
+// This is a C++ style single-line comment
 
-
-<?php
-
-function secondLargest($a){
-    $x=0;
-    $y=0;
-    foreach ($a as $num){
-        if($num>$x){
-            $y=$x;
-            $x=$num;
+function findsecondLargest($array){
+    $largest=0;
+    $secondLargest=0;
+    foreach ($array as $num){
+        if($num > $largest){
+            $secondLargest = $largest;
+            $largest = $num;
         }
-        
+         elseif ($num > $secondLargest && $num < $largest) {
+            $secondLargest = $num;
+        }
     }
+    return $secondLargest;
 }
+$array = [1,98,84,23,54,88,3,6,9,199];
+echo findsecondLargest($array);
+
+// This is a C++ style single-line comment
+// This is a C++ style single-line comment
+// This is a C++ style single-line comment
+
+
+function highestpaid($e){
+
+    $n="";
+    $s=0;
+
+    foreach ($e as $emp) {
+        if ($emp['salary']>$s) {
+            $n=$emp['name'];
+            $s=$emp['salary'];
+        }
+    }
+    return $n;
+}
+
+
+
+$employees = [
+    ["name" => "Ali", "salary" => 6000],
+    ["name" => "Sara", "salary" => 3200],
+    ["name" => "Youssef", "salary" => 2900],
+];
+
+echo highestpaid($employees);
+
