@@ -36,25 +36,40 @@ print(palindrome('radar'))
 # This is a C++ style single-line comment
 
 
-def secondLargest(array):
+def findsecondLargest(array):
     largest=0
     secondLargest=0
-    for array as a:
-         if (a > largest):
+    for a in array :
+        if (a > largest):
             secondLargest = largest
             largest = a
-        elif (num > secondLargest and num < largest):
-            secondLargest = num
-return secondLargest
-
+        elif (a > secondLargest and a < largest):
+            secondLargest = a
+    return secondLargest
 array = [1,98,84,23,54,88,3,6,9,199]
-echo findsecondLargest(array)
+print(findsecondLargest(array))
 
 
 
 
+def highestpaid(a):
+    sal=0
+    n=""
+    for x in a:
+        if x["salary"] > sal:
+            sal=x["salary"]
+            n=x["name"]
+    return n
 
 
+
+employees = [
+    {"name": "Ali", "salary": 200},
+    {"name": "Sara", "salary": 3200},
+    {"name": "Youssef", "salary": 2900},
+]
+
+print(highestpaid(employees))
 
 
 
